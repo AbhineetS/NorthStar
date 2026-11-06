@@ -1,0 +1,119 @@
+.opening-experience {
+  --opening-progress: 0;
+  position: relative;
+  z-index: 20;
+  height: 100vh;
+  background: transparent;
+}
+
+body.opening-active .nav-header {
+  opacity: clamp(0, calc((var(--opening-progress) - .9) * 10), 1);
+  pointer-events: none;
+}
+
+body.opening-active #home {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+body.opening-active .discover-hero-image-wrap {
+  opacity: clamp(0, calc((var(--opening-progress) - .45) * 1.82), 1);
+}
+
+body.opening-active main::before {
+  display: block;
+  height: 100vh;
+  content: "";
+}
+
+body.opening-active main > section:not(#home) {
+  visibility: hidden;
+}
+
+body.opening-active .discover-hero-content {
+  opacity: clamp(0, calc((var(--opening-progress) - .9) * 10), 1);
+}
+
+.opening-experience-sticky {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  min-height: 520px;
+  overflow: hidden;
+  isolation: isolate;
+  background: transparent;
+  pointer-events: none;
+}
+
+.opening-landscape {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: clamp(0, calc((var(--opening-progress) - .24) * 1.32), 1);
+  transform: translateZ(0);
+  will-change: opacity;
+}
+
+.opening-mask {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  opacity: clamp(0, calc(1 - ((var(--opening-progress) - .72) * 3.6)), 1);
+  will-change: opacity;
+  pointer-events: none;
+}
+
+.opening-mask-text {
+  font-family: Arial Black, Arial, Helvetica, sans-serif;
+  font-size: 154px;
+  font-weight: 900;
+  letter-spacing: -7px;
+  transform: scale(calc(.72 + (var(--opening-progress) * 11)));
+  transform-box: view-box;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.opening-experience[data-reduced-motion="true"] {
+  height: 0;
+}
+
+.opening-experience[data-reduced-motion="true"] .opening-mask {
+  display: none;
+}
+
+.opening-experience[data-complete="true"] .opening-experience-sticky {
+  visibility: hidden;
+}
+
+@media (max-width: 700px) {
+  .opening-experience {
+    height: 100vh;
+  }
+
+  .opening-mask-text {
+    font-size: 190px;
+    letter-spacing: -9px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opening-experience {
+    height: 0;
+  }
+
+  .opening-mask {
+    display: none;
+  }
+}

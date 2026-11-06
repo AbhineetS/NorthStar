@@ -1,0 +1,98 @@
+const image = (file, alt, caption) => ({
+  src: `/images/${file}`,
+  alt,
+  caption,
+});
+
+export const mediaRegistry = {
+  hero: {
+    primaryLandscape: image(
+      'WhatsApp Image 2026-10-23 at 19.04.37 (1).jpeg',
+      'A hiker looking across layered Himalayan mountain ridges',
+      'Patnitop · The view ahead',
+    ),
+  },
+
+  explore: [
+    image('WhatsApp Image 2026-10-23 at 19.04.21.jpeg', 'A single cloud floating in a blue mountain sky', 'Sky study'),
+    image('WhatsApp Image 2026-10-23 at 19.04.23.jpeg', 'A warm evening light glowing through the mountain air', 'Golden hour'),
+    image('WhatsApp Image 2026-10-23 at 19.04.27.jpeg', 'A bowl of local food with a mountain view', 'Local table'),
+    image('WhatsApp Image 2026-10-23 at 19.04.33.jpeg', 'A quiet monochrome mountain ridge', 'Ridge line'),
+    image('WhatsApp Image 2026-10-23 at 19.04.35.jpeg', 'A hiker looking toward distant mountain layers', 'On the trail'),
+    image('WhatsApp Image 2026-10-23 at 19.04.36.jpeg', 'A winter tree silhouetted against the valley', 'Winter light'),
+    image('WhatsApp Image 2026-10-23 at 19.04.37.jpeg', 'Layered misty ridges in the Himalayas', 'Misty morning'),
+    image('WhatsApp Image 2026-10-23 at 19.04.38 (1).jpeg', 'A soft alpine sunset behind the peaks', 'Last light'),
+    image('WhatsApp Image 2026-10-23 at 19.04.38 (2).jpeg', 'Snowy Himalayan peaks under a bright sky', 'High country'),
+    image('WhatsApp Image 2026-10-23 at 19.04.38.jpeg', 'A small fire glowing after dark', 'Firelight'),
+    image('WhatsApp Image 2026-10-23 at 19.04.39 (1).jpeg', 'A dark blue sky above a mountain silhouette', 'After dark'),
+    image('WhatsApp Image 2026-10-23 at 19.04.39 (2).jpeg', 'A close view of mountain snow and rock', 'Alpine detail'),
+    image('WhatsApp Image 2026-10-23 at 19.04.39.jpeg', 'A quiet pine tree against the evening sky', 'Pine air'),
+    image('WhatsApp Image 2026-10-23 at 19.04.40 (1).jpeg', 'A bonfire glowing in the night', 'Around the fire'),
+    image('WhatsApp Image 2026-10-23 at 19.04.40 (2).jpeg', 'A wild mountain flower with the valley behind it', 'Field notes'),
+    image('WhatsApp Image 2026-10-23 at 19.04.40.jpeg', 'A simple meal served in the mountains', 'Slow food'),
+    image('WhatsApp Image 2026-10-23 at 19.04.41 (1).jpeg', 'A black and white forest canopy', 'Into the woods'),
+    image('WhatsApp Image 2026-10-23 at 19.04.41 (2).jpeg', 'A night tree lit with warm autumn color', 'Night walk'),
+    image('WhatsApp Image 2026-10-23 at 19.04.41.jpeg', 'A snowy ridge under a grey sky', 'Winter ridge'),
+    image('WhatsApp Image 2026-10-23 at 19.04.42 (1).jpeg', 'A close mountain texture in winter', 'Mountain texture'),
+    image('WhatsApp Image 2026-10-23 at 19.04.42 (2).jpeg', 'A pine tree rising into a blue sky', 'Tall pines'),
+    image('WhatsApp Image 2026-10-23 at 19.04.42.jpeg', 'A high valley view in blue tones', 'Open distance'),
+    image('WhatsApp Image 2026-10-23 at 19.04.43 (1).jpeg', 'A sunflower catching mountain light', 'Summer color'),
+    image('WhatsApp Image 2026-10-23 at 19.04.43 (2).jpeg', 'A broad view over the Himalayan foothills', 'Wide open'),
+    image('WhatsApp Image 2026-10-23 at 19.04.43.jpeg', 'Purple wildflowers covering a hillside', 'Wild bloom'),
+    image('WhatsApp Image 2026-10-23 at 19.04.44 (1).jpeg', 'Water flowing from a small mountain spring', 'Mountain water'),
+    image('WhatsApp Image 2026-10-23 at 19.04.44 (2).jpeg', 'A stone spring basin in the forest', 'The spring'),
+    image('WhatsApp Image 2026-10-23 at 19.04.44.jpeg', 'A tall autumn tree reaching into the sky', 'Autumn canopy'),
+    image('WhatsApp Image 2026-10-23 at 19.04.45 (1).jpeg', 'A dark mountain sky for stargazing', 'Clear nights'),
+    image('WhatsApp Image 2026-10-23 at 19.04.45 (2).jpeg', 'Mountain layers seen from a high terrace', 'Blue distance'),
+    image('WhatsApp Image 2026-10-23 at 19.04.45.jpeg', 'A quiet meal prepared outdoors', 'Table outside'),
+    image('WhatsApp Image 2026-10-23 at 19.04.46.jpeg', 'A distant mountain landscape in soft light', 'The long view'),
+  ],
+
+  activities: [
+    {
+      number: '01',
+      title: 'Mountain Trekking',
+      image: image('trek image.jpeg', 'A hiker resting on a snowy Himalayan mountain trail', 'Mountain trekking'),
+      points: ['12 km total trail', 'Good, walkable mountain paths', 'Scenic Himalayan views'],
+      description: 'A proper outdoor experience through the surrounding mountain landscape, with a roughly 12 km total trek and rewarding scenic viewpoints.',
+    },
+    {
+      number: '02',
+      title: 'Stargazing',
+      image: image('WhatsApp Image 2026-10-23 at 19.04.45 (1).jpeg', 'A clear mountain night sky filled with stars', 'Stargazing'),
+      points: ['Clear mountain night skies', 'Spot Orion, Cassiopeia & the Pleiades', "Shooting stars, if you're lucky"],
+    },
+    {
+      number: '03',
+      title: 'Bonfire Evenings',
+      image: image('WhatsApp Image 2026-10-23 at 19.04.40 (1).jpeg', 'A bonfire glowing outdoors after dark', 'Bonfire evenings'),
+      points: ['Warm nights around the fire', 'Music, stories & conversations', 'Mountain evenings under the open sky'],
+    },
+    {
+      number: '04',
+      title: 'Natural Spring',
+      image: image('WhatsApp Image 2026-10-23 at 19.04.44 (2).jpeg', 'Fresh water flowing from a natural mountain spring basin', 'Natural spring'),
+      points: ['Around 3-4 km from the property', 'A short scenic walk', 'Fresh natural spring water'],
+      description: 'A simple local escape from the property - walk through the surrounding landscape, reach the natural spring and enjoy the quieter side of the mountains.',
+    },
+    {
+      number: '05',
+      title: 'Taste the Mountains',
+      image: image('local-food.jpeg.jpeg', 'A local mountain cooking scene', 'Taste the mountains'),
+      points: ['Makki di roti & sarson da saag', 'Traditional local flavours', 'A meal best enjoyed slowly'],
+    },
+  ],
+
+  stay: [
+    image('Screenshot 2026-10-27 at 2.59.47 PM.png', 'The Northstar living room', 'Living room'),
+    image('Screenshot 2026-10-27 at 3.00.10 PM.png', 'A bright Northstar bedroom', 'A restful room'),
+    image('Screenshot 2026-10-27 at 3.00.19 PM.png', 'A warm bedroom with mountain-stay character', 'Soft light'),
+    image('Screenshot 2026-10-27 at 3.00.31 PM.png', 'A spacious bedroom interior', 'Room to rest'),
+    image('Screenshot 2026-10-27 at 3.00.39 PM.png', 'A bedroom prepared for a quiet stay', 'Made for mornings'),
+    image('Screenshot 2026-10-27 at 3.00.48 PM.png', 'A calm bedroom with a reading corner', 'A quiet corner'),
+    image('Screenshot 2026-10-27 at 3.00.56 PM.png', 'A sunlit bedroom interior', 'Mountain mornings'),
+    image('Screenshot 2026-10-27 at 3.01.08 PM.png', 'A comfortable Northstar guest room', 'Settle in'),
+    image('Screenshot 2026-10-27 at 3.01.20 PM.png', 'Outdoor seating on the Northstar grounds', 'Outside, slowly'),
+    image('Screenshot 2026-10-27 at 3.01.29 PM.png', 'The green grounds around the house', 'The grounds'),
+  ],
+};

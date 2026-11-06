@@ -1,0 +1,226 @@
+#explore,
+#stay {
+  scroll-margin-top: 96px;
+}
+
+#explore .section-heading-row,
+#stay .section-heading-row {
+  width: min(100%, 1120px);
+  margin: 0 auto clamp(42px, 6vw, 72px);
+  align-items: end;
+}
+
+#explore .explore-grid {
+  display: grid;
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: auto !important;
+  gap: 20px;
+  align-items: stretch;
+}
+
+#explore .explore-card {
+  position: static;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  grid-column: auto !important;
+  grid-row: auto !important;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(40, 45, 37, .08);
+  transform: none !important;
+}
+
+#explore .explore-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: none;
+}
+
+#explore .explore-card:hover {
+  transform: none;
+  box-shadow: 0 8px 22px rgba(40, 45, 37, .07);
+}
+
+#explore .explore-card:hover img {
+  transform: none;
+}
+
+#stay .stay-grid {
+  position: static;
+  display: grid;
+  width: min(100%, 1120px);
+  max-width: none;
+  min-height: 0;
+  margin: 0 auto;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: 92px;
+  gap: 20px;
+  align-items: stretch;
+}
+
+#stay .stay-card {
+  position: relative;
+  inset: auto;
+  display: block;
+  width: auto;
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(40, 45, 37, .08);
+  transform: none;
+}
+
+#stay .stay-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(40, 45, 37, .14);
+}
+
+#stay .stay-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transition: transform .6s var(--ease);
+}
+
+#stay .stay-card:hover img {
+  transform: scale(1.035);
+}
+
+#stay .stay-card figcaption {
+  display: none;
+}
+
+#stay .stay-card-1 { grid-column: span 5; grid-row: span 3; }
+#stay .stay-card-2 { grid-column: span 3; grid-row: span 3; }
+#stay .stay-card-3 { grid-column: span 4; grid-row: span 3; }
+#stay .stay-card-4 { grid-column: span 3; grid-row: span 2; }
+#stay .stay-card-5 { grid-column: span 4; grid-row: span 2; }
+#stay .stay-card-6 { grid-column: span 3; grid-row: span 2; }
+#stay .stay-card-7 { grid-column: span 4; grid-row: span 2; }
+#stay .stay-card-8 { grid-column: span 5; grid-row: span 2; }
+
+#explore .explore-card,
+#stay .stay-card {
+  border: 1px solid rgba(36, 61, 50, .08);
+  box-shadow: 0 8px 22px rgba(40, 45, 37, .07);
+}
+
+#stay .stay-card:hover {
+  box-shadow: 0 12px 26px rgba(40, 45, 37, .1);
+}
+
+#stay .stay-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 260px;
+  gap: 20px;
+}
+
+#stay .stay-card,
+#stay .stay-card-1 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+#stay .stay-card-1 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+#stay .stay-card-2,
+#stay .stay-card-3 {
+  grid-row: span 1;
+}
+
+.nav-cta-btn {
+  transition: opacity .25s ease, transform .35s var(--ease), background .25s ease;
+}
+
+.nav-cta-btn.nav-cta-hidden {
+  width: 0;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateY(-4px);
+}
+
+@media (max-width: 900px) {
+  #explore .section-heading-row,
+  #stay .section-heading-row {
+    margin-bottom: 42px;
+  }
+
+  #explore .explore-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  #explore .explore-card {
+    aspect-ratio: 4 / 3;
+  }
+
+  #stay .stay-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 210px;
+    gap: 16px;
+  }
+
+  #stay .stay-card,
+  #stay .stay-card-1 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  #stay .stay-card-1 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 560px) {
+  #explore .section-heading-row,
+  #stay .section-heading-row {
+    display: block;
+    margin-bottom: 38px;
+  }
+
+  #explore .section-heading-row > p,
+  #stay .section-heading-row > p {
+    margin-top: 20px;
+  }
+
+  #explore .explore-grid {
+    gap: 12px;
+  }
+
+  #explore .explore-card {
+    aspect-ratio: 4 / 3;
+  }
+
+  #stay .stay-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+    gap: 12px;
+  }
+
+  #stay .stay-card,
+  #stay .stay-card-1 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
